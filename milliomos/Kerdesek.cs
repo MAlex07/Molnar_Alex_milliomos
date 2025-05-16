@@ -32,5 +32,17 @@ namespace milliomos
             helyesValaz = elemek[6];
             kategoria = elemek[7];
         }
+
+        public void Kiir()
+        {
+            Console.WriteLine(kategoria);
+            Console.WriteLine(kerdes);
+            Console.WriteLine("A: " + valaszok[0]);
+            Console.WriteLine("B: " + valaszok[1]);
+            Console.WriteLine("C: " + valaszok[2]);
+            Console.WriteLine("D: " + valaszok[3]);
+            Console.WriteLine("Helyes válasz: " + helyesValaz);
+            Console.WriteLine("-------------------------------");
+        }
     }
 }
