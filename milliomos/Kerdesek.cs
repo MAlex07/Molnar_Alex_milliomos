@@ -44,5 +44,25 @@ namespace milliomos
             Console.WriteLine("Helyes válasz: " + helyesValaz);
             Console.WriteLine("-------------------------------");
         }
+
+        public string Kategoria()
+        {
+            return kategoria;
+        }
+
+        public string Kerdes()
+        {
+            return kerdes;
+        }
+
+        public string Valaszok(int index)
+        {
+            return valaszok[index];
+        }
+
+        public string Helyesvalsz()
+        {
+            return helyesValaz;
+        }
     }
 }

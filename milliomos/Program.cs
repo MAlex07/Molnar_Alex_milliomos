@@ -20,7 +20,7 @@
 			}
 			*/
 
-            Jatek jatek = new Jatek("sorkerdes.txt");
+            Jatek jatek = new Jatek("sorkerdes.txt", "kerdes.txt");
 			jatek.Sorkerdes();
 
             Console.WriteLine("Játék vége");
