@@ -43,6 +43,7 @@ namespace milliomos
 		public void Sorkerdes()
 		{
 			Random rnd = new Random();
+			Random rand = new Random();
 			List<Kerdes> sorkerdesek = kerdesek.FindAll(k => k.GetKategoria() == "BIOLÓGIA" || k.GetKategoria() == "FILM" || 
 			k.GetKategoria() == "IRODALOM" || k.GetKategoria() == "ÉPÍTÉSZET" || k.GetKategoria() == "FÖLDRAJZ"
             || k.GetKategoria() == "SPORT" || k.GetKategoria() == "NYELV" || k.GetKategoria() == "ORSZÁGOK" || k.GetKategoria() == "OPERA"
@@ -72,7 +73,12 @@ namespace milliomos
 			{
                 Console.WriteLine("Helyes válasz!");
 				List<Kerdesek> jatek = jatekKerdes.FindAll(j => j.Kategoria() == "1");
-				int index1 = rnd.Next(jatek.Count);
+				if (jatek.Count == 0)
+				{
+                    Console.WriteLine("Nincs elérhető kérdés");
+					return;
+				}
+				int index1 = rand.Next(jatek.Count);
 				Kerdesek kerdes1 = jatek[index1];
                 Console.WriteLine("1000ft-os kérdés: " + kerdes1.Kerdes());
                 Console.WriteLine("A: " + kerdes1.Valaszok(0));
