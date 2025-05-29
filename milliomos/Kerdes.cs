@@ -41,6 +41,26 @@ namespace milliomos
             Console.WriteLine("Megoldas kódja: " + megoldasKodja);
             Console.WriteLine("-----------------------------");
         }
+
+        public string GetKategoria()
+        {
+            return kategoria;
+        }
+
+        public string GetKerdes()
+        {
+            return kerdes;
+        }
+
+        public string GetValasz(int index)
+        {
+            return valaszok[index];
+        }
+
+        public string GetMegoldas()
+        {
+            return megoldasKodja;
+        }
     }
 	}
 
